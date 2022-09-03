@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kitchenstaff.servingstatus.ui.ServingStatusFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="10dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="20dp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_cuisine"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:id="@+id/uploadMealFragment_lunch_wallet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/manrope_extrabold"
+            android:text="@string/Lunch_Wallet"
+            android:textColor="@color/black"
+            android:textFontWeight="800"
+            tools:ignore="UnusedAttribute" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/Layout_background"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/serving_status_backarrow_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow"
+            android:layout_marginTop="18dp"
+            android:layout_marginStart="20dp"
+            android:contentDescription="TODO"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <TextView
+            android:id="@+id/serving_status_status_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/manrope_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/status"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="16sp"
+            android:lineHeight="22sp"
+            tools:ignore="UnusedAttribute" />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/serving_status_see_status_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/see_status_from_kitchen_staff_here"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="33dp"
+        android:textFontWeight="500"
+        android:textSize="14sp"
+        android:fontFamily="@font/manrope_regular"
+        android:textColor="@color/black"
+        tools:ignore="UnusedAttribute" />
+
+    <ProgressBar
+        android:id="@+id/serving_status_progress_bar"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/brunch_round_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_greendot"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:id="@+id/serving_status_brunch_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="2dp"
+                    android:text="@string/Brunch"
+                    android:textColor="@color/black"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/serving_status_brunch_kitchen_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="@string/kitchen"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    tools:ignore="RelativeOverlap,UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/serving_status_time_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_brunch_TV"
+                    android:layout_marginStart="36dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="@string/brunch_serving_period"
+                    android:textFontWeight="400"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/serving_status_brunch_serving_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_brunch_kitchen_TV"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:hint="serving status"
+                    android:textColor="@color/textNotification"
+                    android:textFontWeight="700"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/serving_status_meal_serving_llayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_time_TV"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="15dp"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:id="@+id/serving_status_brunch_rice_chicken_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Food_background"
+                        android:fontFamily="@font/manrope_regular"
+                        android:padding="3dp"
+                        android:text="@string/rice_amp_chicken"
+                        android:textAlignment="center"
+                        android:textColor="@color/Today_color"
+                        android:textFontWeight="400"
+                        android:textSize="12sp"
+                        tools:ignore="UnusedAttribute" />
+
+                    <TextView
+                        android:id="@+id/serving_status_egusisoup_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/serving_status_time_TV"
+                        android:layout_gravity="center"
+                        android:background="@color/Food_background"
+                        android:fontFamily="@font/manrope_regular"
+                        android:padding="3dp"
+                        android:text="@string/egusi_soup_amp_semo"
+                        android:textColor="@color/Today_color"
+                        android:textFontWeight="400"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:ignore="UnusedAttribute" />
+
+
+                    <TextView
+                        android:id="@+id/serving_status_beans_porridge_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end"
+                        android:background="@color/Food_background"
+                        android:fontFamily="@font/manrope_regular"
+                        android:padding="3dp"
+                        android:text="@string/beans_porridge"
+                        android:textColor="@color/Today_color"
+                        android:textFontWeight="400"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:ignore="UnusedAttribute" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                <TextView
+                    android:id="@+id/serving_status_ticket_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_meal_serving_llayout"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="@string/ticket_no_9684un56315"
+                    android:textColor="@color/Ticket_color"
+                    android:textFontWeight="400"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <Button
+                    android:id="@+id/brunch_serving_status_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/serving_status_ticket_TV"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/Change_status_button"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/change_status"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@color/loginbutton"
+                    android:textFontWeight="700"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="14dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            app:cardCornerRadius="0dp"
+            app:cardElevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <ImageView
+                    android:id="@+id/dinner_round_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:contentDescription="TODO"
+                    android:src="@drawable/ic_reddot"
+                    tools:ignore="ContentDescription,HardcodedText" />
+
+
+                <TextView
+                    android:id="@+id/serving_status_Dinner_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="17dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:padding="2dp"
+                    android:text="@string/DINNER"
+                    android:textColor="@color/black"
+                    android:textFontWeight="400"
+                    tools:ignore="UnusedAttribute" />
+
+
+                <TextView
+                    android:id="@+id/serving_status_dinner_kitchen_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="@string/kitchen"
+                    android:textFontWeight="400"
+                    android:textSize="14sp"
+                    tools:ignore="RelativeOverlap,UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/serving_status_timer_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_Dinner_TV"
+                    android:layout_marginStart="36dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="@string/dinner_serving_period"
+                    android:textFontWeight="400"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <TextView
+                    android:id="@+id/serving_status_dinner_serving_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_dinner_kitchen_TV"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:hint="Serving status"
+                    android:textColor="@color/Remove_color"
+                    android:textFontWeight="700"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/serving_status_dinner_meal_serving_llayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_timer_TV"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/serving_status_dinner_efo_semo_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Food_background"
+                        android:fontFamily="@font/manrope_regular"
+                        android:padding="3dp"
+                        android:text="@string/efo_amp_semo"
+                        android:textAlignment="center"
+                        android:textColor="@color/Jellof_rice"
+                        android:textFontWeight="400"
+                        android:textSize="12sp"
+                        tools:ignore="UnusedAttribute" />
+
+                    <TextView
+                        android:id="@+id/serving_Jollof_rice_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Food_background"
+                        android:fontFamily="@font/manrope_regular"
+                        android:padding="3dp"
+                        android:text="@string/jollof_rice_amp_egg"
+                        android:textColor="@color/Jellof_rice"
+                        android:textFontWeight="400"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:ignore="UnusedAttribute" />
+
+                    <TextView
+                        android:id="@+id/serving_status_bean_porridge_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/Food_background"
+                        android:fontFamily="@font/manrope_regular"
+                        android:padding="3dp"
+                        android:text="@string/beans_porridge"
+                        android:textColor="@color/Jellof_rice"
+                        android:textFontWeight="400"
+                        android:textSize="12sp"
+                        android:visibility="gone"
+                        tools:ignore="UnusedAttribute" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <TextView
+                    android:id="@+id/serving_status_ticket_no_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/serving_status_dinner_meal_serving_llayout"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/manrope_regular"
+                    android:text="@string/ticket_no_9684un56315"
+                    android:textColor="@color/Ticket_color"
+                    android:textFontWeight="400"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+
+                <Button
+                    android:id="@+id/dinner_serving_status_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_below="@+id/serving_status_ticket_no_TV"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:backgroundTint="@color/Change_status_button"
+                    android:fontFamily="@font/manrope_regular"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:text="@string/Change_Status"
+                    android:textAppearance="@style/TextAppearance.AppCompat"
+                    android:textColor="@color/loginbutton"
+                    android:textFontWeight="700"
+                    android:textSize="12sp"
+                    tools:ignore="UnusedAttribute" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

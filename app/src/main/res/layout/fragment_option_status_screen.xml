@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:background="@color/Relative_background"
+    tools:context=".kitchenstaff.servingstatus.ui.BrunchOptionStatusScreenFragment">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        style="@style/ModalBottomSheet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/roundcorner_radius"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/optionMealFragment_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/todo"
+            android:foregroundGravity="center"
+            android:src="@drawable/ic_rectangle" />
+
+        <TextView
+            android:id="@+id/optionMealFragment_add_meal_Tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/manrope_regular"
+            android:gravity="center"
+            android:text="@string/select_option"
+            android:textColor="@color/black"
+            android:textFontWeight="700"
+            android:textSize="14sp"
+            tools:ignore="UnusedAttribute" />
+
+        <ImageView
+            android:id="@+id/optionMealFragment_line_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:contentDescription="TODO"
+            android:padding="4dp"
+            android:layout_marginBottom="15dp"
+            android:src="@drawable/ic_line1"
+            tools:ignore="ContentDescription,HardcodedText" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/brunch_status_progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+        <RadioGroup
+            android:id="@+id/option_status_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/option_status_serving_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="8dp"
+                android:buttonTint="@color/loginbutton"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/serving"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                tools:ignore="UnusedAttribute" />
+
+            <RadioButton
+                android:id="@+id/option_status_Not_serving_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="29dp"
+                android:buttonTint="@color/loginbutton"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/Not_Serving"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                tools:ignore="UnusedAttribute" />
+
+            <RadioButton
+                android:id="@+id/option_status_served_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginBottom="63dp"
+                android:buttonTint="@color/loginbutton"
+                android:fontFamily="@font/manrope_regular"
+                android:text="@string/served"
+                android:textColor="@color/black"
+                android:textFontWeight="400"
+                android:textSize="14sp"
+                tools:ignore="UnusedAttribute" />
+
+        </RadioGroup>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>
